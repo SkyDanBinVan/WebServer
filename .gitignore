@@ -74,3 +74,8 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+#misc
+package-lock.json
+package.json
+.gitattributes
