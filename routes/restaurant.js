@@ -88,6 +88,16 @@ Router.get('/', async (req, res) => {
     catch (e) {
         res.status(400).send(e.message);
     }
+})
+.get('/:rest_id/menus', async (req, res) => {
+    try {
+        const restaurantMenus = await Menu.findAll({where: {RestaurantId: req.params.rest_id}})
+
+        res.status(201).send(restaurantMenus);
+    }
+    catch (e) {
+        res.status(400).send(e.message);
+    }
 });
 
 module.exports = Router;

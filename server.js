@@ -5,6 +5,9 @@ const app = express();
 const  restaurantRoutes  = require('./routes/restaurant')
 const  menuRoutes  = require('./routes/menu')
 const  menuItemRoutes  = require('./routes/menuItem')
+const cors = require("cors")
+
+app.use(cors())
 app.use(express.json());
 
 app.use('/api/restaurants', restaurantRoutes);
